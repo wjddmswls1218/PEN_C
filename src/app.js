@@ -16,21 +16,7 @@ app.set("view engine", "pug");
 
 app.use(morgan(`dev`));
 
-mongoose.connect(
-    `mongodb://4leaf:fourleaf0309@210.114.1.127:27017/admin`,
-    {
-        dbName: `JEJ_PRA`,
-        useNewUrlparser: true,
-        useCreateIndex: true,
-    },
-    (error) => {
-        if (error) {
-            console.log("XXXXXXXX");
-        } else {
-            console.log("OOOOOOOO");
-        }
-    }
-);
+
 
 app.use("/", globalRouter);
 
